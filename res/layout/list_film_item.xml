@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:padding="@dimen/margin_small" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_item_in_list"
+        android:descendantFocusability="blocksDescendants" >
+
+        <FrameLayout
+            android:id="@+id/dumb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small" >
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="@dimen/image_film_width"
+                android:layout_height="@dimen/image_film_height"
+                android:contentDescription="@string/desc_list_item_icon"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+            <ProgressBar
+                android:id="@+id/pbLoading"
+                style="?android:attr/android:progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+               	android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btnBookmarks"
+            android:layout_width="@dimen/book_mark_size"
+            android:layout_height="@dimen/book_mark_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:background="@drawable/selector_bookmarks"
+             />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_toLeftOf="@id/btnBookmarks"
+            android:layout_toRightOf="@id/dumb1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_large_x"
+                android:textStyle="bold"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+            <TextView 
+                android:id="@+id/tvDuration"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="duration"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_large"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
